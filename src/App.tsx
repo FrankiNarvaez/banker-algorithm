@@ -15,9 +15,9 @@ const App = () => {
   const [available, setAvailable] = useState(Array(resources).fill(0));
   const [safeSequence, setSafeSequence] = useState<number[] | null>(null);
   const [message, setMessage] = useState("");
-  const [step, setStep] = useState(0);
+  const [, setStep] = useState(0);
   const [simulating, setSimulating] = useState(false);
-  const [simulationAvailable, setSimulationAvailable] = useState<number[]>([]);
+  const [, setSimulationAvailable] = useState<number[]>([]);
   const [completed, setCompleted] = useState<boolean[]>([]);
   type StepDetail = {
     process: number;
@@ -29,8 +29,6 @@ const App = () => {
   
   const [stepDetails, setStepDetails] = useState<StepDetail[]>([]);
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
-  
-
 
   const handleAvailableChange = (index: number, value: string) => {
     const newAvailable = [...available];
